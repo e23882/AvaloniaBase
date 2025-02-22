@@ -15,15 +15,17 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Grid>
-      <Grid.RowDefinitions>
-        <RowDefinitions>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-        </RowDefinitions>
-      </Grid.RowDefinitions>
+    <Grid RowDefinitions="auto, *">
       <DataGrid ItemsSource="{Binding AllCat}" Grid.Row="0" AutoGenerateColumns="True"/>
+      <StackPanel Grid.Row="1" Orientation="Vertical">
+        <Button Content="Test"/>
+        <ComboBox>
+          <ComboBoxItem Content="1"/>
+          <ComboBoxItem Content="2"/>
+          <ComboBoxItem Content="3"/>
+        </ComboBox>
+      </StackPanel>
+      
     </Grid>
 
 </Window>
