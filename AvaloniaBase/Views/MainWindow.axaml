@@ -15,6 +15,15 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </RowDefinitions>
+      </Grid.RowDefinitions>
+      <DataGrid ItemsSource="{Binding AllCat}" Grid.Row="0" AutoGenerateColumns="True"/>
+    </Grid>
 
 </Window>
